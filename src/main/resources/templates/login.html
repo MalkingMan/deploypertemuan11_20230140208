@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+<main class="page">
+    <section class="card">
+        <h1 class="title">Login</h1>
+        <p class="subtitle">Masuk untuk melanjutkan</p>
+
+        <form class="form" th:action="@{/login}" method="post">
+            <input class="input" type="text"
+                   name="username"
+                   placeholder="Username" autocomplete="username">
+
+            <input class="input" type="password"
+                   name="password"
+                   placeholder="Password" autocomplete="current-password">
+
+            <button class="button" type="submit">
+                Login
+            </button>
+        </form>
+
+        <p class="meta">Belum punya akun? <a th:href="@{/register}">Register disini</a></p>
+    </section>
+</main>
+
+</body>
+</html>

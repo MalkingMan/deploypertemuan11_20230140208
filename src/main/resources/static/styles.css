@@ -1,0 +1,143 @@
+:root {
+  --bg: #ffffff;
+  --fg: #000000;
+  --muted: #666666;
+  --border: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  color: var(--muted);
+}
+
+.page {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px 20px;
+}
+
+.card {
+  width: 100%;
+}
+
+.title {
+  margin: 0 0 8px;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  margin: 0 0 32px;
+  color: var(--muted);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  background: transparent;
+  color: var(--fg);
+  font-size: 16px;
+  transition: border-color 0.2s ease;
+}
+
+.input::placeholder {
+  color: #a0a0a0;
+}
+
+.input:focus {
+  outline: none;
+  border-bottom-color: var(--fg);
+}
+
+.button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  background: var(--fg);
+  color: var(--bg);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: opacity 0.2s ease;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.meta {
+  margin-top: 32px;
+  font-size: 14px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0 0 40px;
+}
+
+.list > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.list dt {
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.list dd {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-start;
+}
